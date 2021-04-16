@@ -17,8 +17,6 @@ class Innernet < Formula
   def install
     cd "client" do
       system "cargo", "install", *std_cargo_args
-      #man8.mkpath
-      #man8.install "doc/innernet.8"
     end
     bin.install_symlink "innernet" => "inn"
   end
