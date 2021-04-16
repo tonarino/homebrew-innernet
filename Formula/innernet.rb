@@ -1,10 +1,10 @@
 class Innernet < Formula
-  desc "A private network system that uses WireGuard under the hood."
+  desc "Innernet is a private network system that uses WireGuard under the hood"
   homepage "https://github.com/tonarino/innernet"
   url "https://github.com/tonarino/innernet/archive/refs/tags/v1.1.0.tar.gz"
   sha256 "308f5b7de6dcb017fd76fd0df3ceac723dfc6ca709d6f3ebe35c0c15457f968c"
   license "MIT"
-  head "https://github.com/tonarino/innernet.git", :branch => "main"
+  head "https://github.com/tonarino/innernet.git", { branch: "main" }
 
   livecheck do
     url :stable
