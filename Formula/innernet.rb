@@ -23,6 +23,7 @@ class Innernet < Formula
   end
 
   test do
+    # TODO(jake): add tests.
     system "true"
   end
 end
