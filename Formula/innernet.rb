@@ -13,6 +13,7 @@ class Innernet < Formula
 
   depends_on "rust" => :build
   depends_on "wireguard-go"
+  uses_from_macos "llvm"
 
   def install
     cd "client" do
