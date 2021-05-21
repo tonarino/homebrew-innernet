@@ -1,8 +1,8 @@
 class Innernet < Formula
   desc "Creates private networks that use WireGuard under the hood"
   homepage "https://github.com/tonarino/innernet"
-  url "https://github.com/tonarino/innernet/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "ae0d44c7b1470adcd948df7a11b0e1a9a177da4cd44e62bb8340cf8b1ae78c27"
+  url "https://github.com/tonarino/innernet/archive/refs/tags/v1.3.0.tar.gz"
+  sha256 "91224f51befa190c775ed7bcbbb083cec83d281c3c5c2cef5928213b19bf0440"
   license "MIT"
   head "https://github.com/tonarino/innernet.git", { branch: "main" }
 
