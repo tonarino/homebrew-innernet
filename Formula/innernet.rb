@@ -22,6 +22,37 @@ class Innernet < Formula
     bin.install_symlink "innernet" => "inn"
   end
 
+  def plist
+    <<~EOS
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+      <plist version="1.0">
+        <dict>
+          <key>Label</key>
+          <string>#{plist_name}</string>
+          <key>KeepAlive</key>
+          <true/>
+          <key>RunAtLoad</key>
+          <true/>
+          <key>ProgramArguments</key>
+          <array>
+            <string>#{opt_bin}/innernet</string>
+            <string>up</string>
+            <string>--daemon</string>
+            <string>--interval</string>
+            <string>60</string>
+          </array>
+          <key>UserName</key>
+          <string>root</string>
+          <key>LaunchOnlyOnce</key>
+          <true/>
+          <key>StandardOutPath</key>
+          <string>/dev/null</string>
+          <key>StandardErrorPath</key>
+          <string>/dev/null</string>
+        </dict>
+      </plist>
+    EOS
   test do
     # TODO(jake): add tests.
     system "true"
