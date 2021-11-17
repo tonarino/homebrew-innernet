@@ -53,6 +53,7 @@ class Innernet < Formula
         </dict>
       </plist>
     EOS
+  end
   test do
     # TODO(jake): add tests.
     system "true"
