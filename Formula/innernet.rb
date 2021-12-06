@@ -1,8 +1,8 @@
 class Innernet < Formula
   desc "Creates private networks that use WireGuard under the hood"
   homepage "https://github.com/tonarino/innernet"
-  url "https://github.com/tonarino/innernet/archive/refs/tags/v1.5.1.tar.gz"
-  sha256 "56ce88db4acf3f500b084d629304aa338977865f292a75a40c7a8a83c2276fe3"
+  url "https://github.com/tonarino/innernet/archive/refs/tags/v1.5.2.tar.gz"
+  sha256 "e5ebec0b17a74d3bb241faeeef7ea2069aa61db169e3de07394b1f62d4b1b830"
   license "MIT"
   head "https://github.com/tonarino/innernet.git", { branch: "main" }
 
@@ -44,8 +44,6 @@ class Innernet < Formula
           </array>
           <key>UserName</key>
           <string>root</string>
-          <key>LaunchOnlyOnce</key>
-          <true/>
           <key>StandardOutPath</key>
           <string>/dev/null</string>
           <key>StandardErrorPath</key>
@@ -55,7 +53,8 @@ class Innernet < Formula
     EOS
   end
   test do
-    # TODO(jake): add tests.
-    system "true"
+    cd "client" do
+      system "cargo", "test", *std_cargo_args
+    end
   end
 end
